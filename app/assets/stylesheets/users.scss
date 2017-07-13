@@ -1,0 +1,29 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#Log_in_form_wrapper {
+	margin: auto;
+	display: flex;
+	padding: 25px;
+	justify-content: center;
+	height: auto;
+	width: 40vw;
+	background-color: #FF6600;
+	color: #000000;
+}
+
+#sign_up_form_wrapper {
+	margin: auto;
+	display: flex;
+	padding: 25px;
+	justify-content: center;
+	height: auto;
+	width: 40vw;
+	background-color: #FF6600;
+	color: #000000;
+}
+
+.form_label {
+	color: white;
+}
