@@ -1,28 +1,31 @@
-<h1>Movies#new</h1>
-<p>Find me in app/views/movies/new.html.erb</p>
+<h2 align="center">Now you can add a new movie!</h2>
 
 <div id="new_movie_form_wrapper">
-	<%= form_with model: @movie, local: true do |f| %>
+	<%= form_with model: @movie, local: true, html: { multipart: true } do |f| %>
+		<%= f.label :name, class: "form_label" %>
+		<br>
 		<%= f.text_field :name %>
 		<br>
-		<%= f.label :name %>
 		<br>
+		<%= f.label :Genre, class: "form_label" %>
 		<br>
 		<%= f.text_field :genre %>
 		<br>
-		<%= f.label :Genre %>
 		<br>
+		<%= f.label :location_filmed, class: "form_label" %> 
 		<br>
 		<%= f.text_field :location_filmed %>
 		<br>
-		<%= f.label :location_filmed %> 
 		<br>
+		<%= f.label	:Run_Time, class: "form_label" %>
 		<br>
 		<%= f.text_field :length %>
 		<br>
-		<%= f.label	:Run_Time %>
+		<br>
+		<%= f.file_field :avatar %>
 		<br>
 		<br>
 		<%= f.submit %>
 	<% end %>
 </div>
+

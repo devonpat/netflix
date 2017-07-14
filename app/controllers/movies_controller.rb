@@ -21,6 +21,7 @@ class MoviesController < ApplicationController
 
   def show
     @user = current_user
+    @movie = Movie.find(params[:id])
   end
 
   def update
