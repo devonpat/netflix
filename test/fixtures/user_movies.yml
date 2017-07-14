@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  video: one
+  recently_watched: MyString
+  watched_count: MyString
+  liked: MyString
+
+two:
+  user: two
+  video: two
+  recently_watched: MyString
+  watched_count: MyString
+  liked: MyString

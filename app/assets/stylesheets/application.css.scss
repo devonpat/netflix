@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+@import "materialize/components/color";
+	$primary-color: color("blue", "lighten-2") !default;
+	$secondary-color: color("yellow", "base") !default;
+ @import "materialize";
+
+
+ body {
+	background-color: black;
+}
+
+ #main_header {
+ 	background-color: #FF6600;
+ }
+
+ #logo_home {
+ 	color: white;
+ 	font-size: 250%;
+ }
+
+ #button_log_out {
+	color: black;
+ }
+
+ #button_log_in {
+	color: black;
+ }
+
+ #button_sign_up {
+	color: black;
+ }
