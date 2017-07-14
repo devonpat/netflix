@@ -2,4 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-new_movie_form_wrapper
+#new_movie_form_wrapper {
+	margin: auto;
+	display: flex;
+	padding: 25px;
+	justify-content: center;
+	height: auto;
+	width: 40vw;
+	background-color: #5fc659;
+	color: #000000;
+}
+
+.form_label {
+	color: black;
+}
+
+#new_movie_pic_wrapper {
+	margin: auto;
+	display:flex;
+	padding:10px;
+	justify-content: center;
+	height: auto;
+	widows: 10vw;
+	float: left;
+}
