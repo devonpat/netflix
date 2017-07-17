@@ -1,10 +1,6 @@
 
 Rails.application.routes.draw do
 
-	resources :movies
-	resources :ratings
-	resources :user_movies
-
   get 'home/index'
 
   get 'users/index'
@@ -15,6 +11,10 @@ Rails.application.routes.draw do
 		sessions: 'users/sessions',
 		registrations: 'users/registrations'
 	}
+
+	resources :movies
+	resources :ratings
+	resources :user_movies
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

@@ -1,2 +1,11 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
+
+<%= render "movies/form" %>
+
+<h3>Your movies</h3>
+<div class="movies">
+  <% @user.creations.each do |movie| %>
+    <%= render movie %>
+  <% end %>
+</div>

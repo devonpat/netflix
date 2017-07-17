@@ -8,20 +8,21 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new(movie_params)
-    if @movie.save
-      redirect_to @movie
-    else
-      render :new
+    @movie = current_user.creations.new(movie_params)
+    respond_to do |format|
+      if @movie.save
+        format.js
+      end
     end
   end
 
   def edit
+    @movie = Movie.find(params[:id])
   end
 
   def show
     @user = current_user
-    @movie = Movie.find(params[:id])
+
   end
 
   def update
@@ -32,7 +33,7 @@ class MoviesController < ApplicationController
 
   private
   def movie_params
-    params.require(:movie).permit(:name, :genre, :location_filmed, :length)
+    params.require(:movie).permit(:name, :genre, :location_filmed, :length, :avatar)
   end
 end
 
