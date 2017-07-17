@@ -4,8 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :user_movies
   has_many :movies, through: :user_movies
 	has_many :ratings
+  has_many :creations, class_name: "Movie"
 
 	validates :first_name, presence: true
 	validates :last_name, presence: true
