@@ -1,4 +1,31 @@
+<%= image_tag @movie.avatar.url(:thumb) %>
 
+<div id="Rating_form_wrapper">
+	<%= form_with model: @rating, html: { local: true } do |f| %>
+		<%= f.hidden_field :movie_id, value: @movie.id %>
+		<%= f.label :stars, class: "form_label" %>
+		<br>
+		<%= f.number_field :stars %>
+		<br>
+		<br>
+		<div class="row 10">
+			  <div class="row">
+			    <div class="input-field col s12">
+			      <textarea id="textarea1" class="materialize-textarea"></textarea>
+			      <label for="textarea1">Your Review</label>
+			    </div>
+			  </div>
+		</div>
+		<br>
+		<%= f.submit %>
+	<% end %>
+</div>
 
+<h3> Review Stars </h3>
+<div class="movies">
+  <% @movie.ratings.reverse.each do |rating| %>
+    <%= rating.stars %> <br>
+  <% end %>
+</div>
 
 
