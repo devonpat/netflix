@@ -1,3 +1,15 @@
 // Place all the styles related to the ratings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#Rating_form_wrapper {
+	margin: auto;
+	display: flex;
+	padding: 25px;
+	justify-content: center;
+	height: auto;
+	width: 40vw;
+	background-color: #5fc659;
+	color: #000000;
+}

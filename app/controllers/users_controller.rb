@@ -7,6 +7,5 @@ class UsersController < ApplicationController
   def show
   	@user = current_user
   	@movie = Movie.new
-    @movies = Movie.all
   end
 end
