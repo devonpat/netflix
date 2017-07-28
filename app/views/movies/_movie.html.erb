@@ -1,5 +1,7 @@
 <div class="movie">
 	Name: <%= movie.creator.first_name %>
 	Title: <%= movie.name %>
+	<%= link_to "Review", @movie_path %>
+	<br>
 	<%= link_to "delete movie", movie, method: :delete, remove: true, data: {confirm: 'Are you sure you want to delete this Movie?'}, class: 'delete-movie' %>
 </div>
