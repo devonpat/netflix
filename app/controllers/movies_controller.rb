@@ -22,6 +22,7 @@ class MoviesController < ApplicationController
 
   def show
     @user = current_user
+    @movie = Movie.find(params[:id])
 
   end
 
@@ -29,6 +30,14 @@ class MoviesController < ApplicationController
   end
 
   def destroy
+    @movie = Movie.find(params[:id])
+    if @movie.destroy
+      flash[:notice] = 'That movie sucked anyway'
+      redirect_to users_show_path
+    else
+      flash[:alert] = 'Ha! It didn\'t get deleted!'
+      redirect_to users_show_path
+    end
   end
 
   private
